@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AutomatizacionBanistmo.iml" filepath="$PROJECT_DIR$/.idea/AutomatizacionBanistmo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PruebaBanistmo.iml" filepath="$PROJECT_DIR$/.idea/modules/PruebaBanistmo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PruebaBanistmo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PruebaBanistmo.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PruebaBanistmo.test.iml" filepath="$PROJECT_DIR$/.idea/modules/PruebaBanistmo.test.iml" />
     </modules>
   </component>
 </project>

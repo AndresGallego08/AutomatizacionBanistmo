@@ -1,5 +1,7 @@
 package com.banistmo.certification.website.website.stepdefinitions;
 
+import com.banistmo.certification.website.exceptions.ErrorRedireccionamientoException;
+import com.banistmo.certification.website.questions.ElMensaje;
 import com.banistmo.certification.website.tasks.Ingresar;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
@@ -10,9 +12,11 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.thucydides.core.annotations.Managed;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
 import static com.banistmo.certification.website.utils.UrlCertificacion.BANISTMO_CERTIFICATION_URL;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 
@@ -41,8 +45,8 @@ public class SostenibilidadStepDefinitions {
 
     @Entonces("^puede ver el mensaje (.*)$")
     public void puedeVerElMensajeDeConfirmacion(String mensaje) {
-        // theActorInTheSpotlight().should(seeThat(ElMensaje.deConfirmacion(), Matchers.containsString(mensaje)).
-        //       orComplainWith(ErrorRedireccionamientoException.class, "No se pudo validar conrrectamente el mensaje: "+mensaje));
+        theActorInTheSpotlight().should(seeThat(ElMensaje.deConfirmacion(), Matchers.containsString(mensaje)).
+                orComplainWith(ErrorRedireccionamientoException.class, "No se pudo validar conrrectamente el mensaje: " + mensaje));
     }
 
 }

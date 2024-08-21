@@ -11,5 +11,7 @@ public class AcercaDeNosotrosUI extends PageObject {
             locatedBy("//a[contains(text(),'Información Corporativa')]");
     public static final Target LINK_SOSTENIBILIDAD = Target.the("Enlace redireccionamiento a opción: Sostenibilidad").
             locatedBy("//a[contains(text(),'Sostenibilidad')]");
+    public static final Target LBL_QUE_SIGNIFICA_SOSTENIBILIDAD = Target.the("Texto para validar redireccionamiento a opción: Sostenibilidad").
+            locatedBy("//h2[contains(text(),'¿Qué significa sostenibilidad?')]");
 
 }
